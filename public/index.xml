@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>My New Hugo Site</title>
+    <title>lamjan</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <description>Recent content on lamjan</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 22 May 2026 00:00:00 +0000</lastBuildDate>
@@ -21,6 +21,22 @@
 &lt;li&gt;Found a Conditional Access policy causing a conflict because it required a compliant device, but the user was on an unmanaged home laptop.&lt;/li&gt;
 &lt;li&gt;Created a temporary exclusion group for emergency remote access.&lt;/li&gt;
 &lt;/ol&gt;</description>
+    </item>
+    <item>
+      <title>How to Spin Up an Azure VM Clean and Fast</title>
+      <link>http://localhost:1313/posts/azure-vm-setup/</link>
+      <pubDate>Fri, 22 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/azure-vm-setup/</guid>
+      <description>&lt;p&gt;If you are working in cloud engineering, spinning up a Virtual Machine in Azure is basic infrastructure work. You do not need any over-complicated setup or long stories to get one live.&lt;/p&gt;
+&lt;p&gt;Whether you want to test a script or deploy a small environment, you want to get it done fast without stressing yourself or burning through your subscription credits. Here is the step by step guide to getting a VM live and running.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Ultimate Guide to M365 Custom Domains: Automatic, Manual, and NS Paths</title>
+      <link>http://localhost:1313/posts/custom-domain-m365/</link>
+      <pubDate>Fri, 22 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/custom-domain-m365/</guid>
+      <description>&lt;p&gt;Nobody wants to use that long company.onmicrosoft.com address for official business emails. It looks temporary and unprofessional. Mapping your actual custom domain to Microsoft 365 is the very first thing you should do, but if your DNS is not correct, your emails will just be bouncing.&lt;/p&gt;
+&lt;p&gt;Depending on where your domain is hosted, Microsoft offers three different setup paths. Let us break them down directly so you can deploy cleanly without any issues.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
