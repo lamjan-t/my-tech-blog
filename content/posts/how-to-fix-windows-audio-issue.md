@@ -13,7 +13,7 @@ Before messing with system registries or stripping down drivers, we need to hand
 
 Next, verify that Windows has not routed your sound to a silent digital channel like a sleeping monitor or an inactive virtual mixer. Look down at your taskbar, right-click the speaker icon, and select Sound Settings. Check the Output section to ensure your preferred hardware is actively selected as the main playback device.
 
-![Windows Sound Settings Choose your output device dropdown](/images/windows-sound-settings-output.png)
+![Windows Sound Settings panel showing the correct audio output device selected in the main dropdown menu](/images/windows-sound-settings-output.png)
 
 ### Restarting the Windows Audio Endpoint Engine
 
@@ -29,7 +29,7 @@ If restarting the background service yields no results, your local device driver
 
 Right-click your Start button and open Device Manager from the administrative menu list. Expand the category at the absolute top labeled Audio inputs and outputs. Locate your main output hardware, which is usually named Speakers or Realtek High Definition Audio. Right-click that specific hardware item and select Uninstall device.
 
-![Windows Device Manager Audio Inputs and Outputs driver update](/images/windows-device-manager-uninstall.png)
+![Device Manager window showing the audio inputs and outputs section with the speaker context menu open to uninstall device](/images/windows-device-manager-uninstall.png)
 
 Confirm the prompt when it asks for validation. Do not restart your computer just yet. Instead, look at the main menu bar of Device Manager, click Action, and choose Scan for hardware changes. Windows will instantly notice the missing hardware layer, probe its internal driver store, and rebuild a fresh working instance of the audio pipeline.
 
