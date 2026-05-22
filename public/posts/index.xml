@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on My New Hugo Site</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on My New Hugo Site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 22 May 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How I Fixed the Azure MFA Login Loop</title>
+      <link>http://localhost:1313/posts/mfa-login-loop/</link>
+      <pubDate>Fri, 22 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/mfa-login-loop/</guid>
+      <description>&lt;h3 id=&#34;the-issue&#34;&gt;The Issue&lt;/h3&gt;
+&lt;p&gt;Today a user got stuck in a continuous authentication loop when trying to access the Azure portal. They would input their password, approve the Microsoft Authenticator prompt, and then get kicked back to the login screen.&lt;/p&gt;
+&lt;h3 id=&#34;how-i-resolved-it&#34;&gt;How I Resolved It&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Opened &lt;strong&gt;Microsoft Entra ID&lt;/strong&gt; and checked the user&amp;rsquo;s &lt;strong&gt;Sign-in logs&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Found a Conditional Access policy causing a conflict because it required a compliant device, but the user was on an unmanaged home laptop.&lt;/li&gt;
+&lt;li&gt;Created a temporary exclusion group for emergency remote access.&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+  </channel>
+</rss>
