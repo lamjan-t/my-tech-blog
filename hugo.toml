@@ -3,6 +3,17 @@ languageCode = 'en-us'
 title = 'lamjan'
 theme = 'PaperMod'
 
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+[params]
+env = "production"
+description = "Deep-dive tutorials on Microsoft 365 administration, systems infrastructure, and Android OS engineering."
+author = "lamjan"
+defaultTheme = "auto"
+
+ShowCodeCopyButtons = true
+
 [params.label]
 text = "lamjan"
 icon = "/images/logo.svg"
@@ -13,3 +24,25 @@ favicon = "/favicon.svg"
 favicon16x16 = "/favicon-96x96.png"
 favicon32x32 = "/favicon-96x96.png"
 apple_touch_icon = "/apple-touch-icon.png"
+
+[params.homeInfoParams]
+Title = "Hey, I'm lamjan ??"
+Content = "Welcome to my digital lab. I write straight-to-the-point technical guides covering enterprise Microsoft 365 tenants, custom Android operating system configurations, and low-level system recovery paths."
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/lamjan-t"
+
+[[params.socialIcons]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/abdulhakeem-tijani/"
+
+[[menu.main]]
+name = "Posts"
+url = "/posts/"
+weight = 10
+
+[[menu.main]]
+name = "Tags"
+url = "/tags/"
+weight = 20
