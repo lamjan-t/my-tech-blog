@@ -11,8 +11,8 @@ env = "production"
 description = "Deep-dive tutorials on Microsoft 365 administration, systems infrastructure, and Android OS engineering."
 author = "lamjan"
 defaultTheme = "auto"
-
 ShowCodeCopyButtons = true
+comments = true
 
 [params.label]
 text = "lamjan"
@@ -20,9 +20,9 @@ icon = "/images/logo.svg"
 iconHeight = 35
 
 [params.assets]
-favicon = "/favicon.svg"
-favicon16x16 = "/favicon-96x96.png"
-favicon32x32 = "/favicon-96x96.png"
+favicon = "/favicon.ico"
+favicon16x16 = "/favicon-16x16.png"
+favicon32x32 = "/favicon-32x32.png"
 apple_touch_icon = "/apple-touch-icon.png"
 
 [params.homeInfoParams]
