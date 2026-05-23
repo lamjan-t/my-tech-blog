@@ -1,7 +1,7 @@
 ---
 title: 'How to Launch Your First Azure Virtual Machine: A Simple Guide'
 date: 2026-05-23
-draft: true
+draft: false
 tags: ['Cloud', 'Azure', 'Tutorial']
 categories: ['Cloud Computing']
 ---
