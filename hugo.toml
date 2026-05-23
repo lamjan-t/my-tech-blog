@@ -37,12 +37,18 @@ url = "https://github.com/lamjan-t"
 name = "linkedin"
 url = "https://www.linkedin.com/in/abdulhakeem-tijani/"
 
+# SPLIT NAVIGATION LAYOUT
 [[menu.main]]
-name = "Posts"
-url = "/posts/"
+name = "Microsoft 365"
+url = "/categories/m365/"
 weight = 10
 
 [[menu.main]]
-name = "Tags"
-url = "/tags/"
+name = "Android OS"
+url = "/categories/android/"
 weight = 20
+
+[[menu.main]]
+name = "All Posts"
+url = "/posts/"
+weight = 30
