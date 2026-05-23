@@ -49,3 +49,5 @@ showPoweredBy = false
 [[params.socialIcons]]
 name = "github"
 url = "https://github.com/lamjan-t"
+[markup.goldmark.renderer]
+unsafe = true
