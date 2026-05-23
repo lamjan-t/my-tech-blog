@@ -8,12 +8,13 @@ home = ["HTML", "RSS", "JSON"]
 
 [params]
 env = "production"
-description = "Deep-dive tutorials on cloud computing infrastructure, enterprise systems administration, and mobile OS engineering."
+description = "Clear, simple, and step-by-step guides for general cloud setups and phone software diagnostics."
 author = "lamjan"
 defaultTheme = "auto"
 ShowCodeCopyButtons = true
 comments = true
 
+# CLEAN TOP LABEL BRANDING
 [params.label]
 text = "lamjan"
 icon = "/images/logo.svg"
@@ -25,19 +26,7 @@ favicon16x16 = "/favicon-16x16.png"
 favicon32x32 = "/favicon-32x32.png"
 apple_touch_icon = "/apple-touch-icon.png"
 
-[params.homeInfoParams]
-Title = "Hey, I'm lamjan 👋"
-Content = "Welcome to my digital lab. I write straight-to-the-point technical guides covering general cloud computing infrastructure, enterprise information systems, and low-level mobile software modifications."
-
-[[params.socialIcons]]
-name = "github"
-url = "https://github.com/lamjan-t"
-
-[[params.socialIcons]]
-name = "linkedin"
-url = "https://www.linkedin.com/in/abdulhakeem-tijani/"
-
-# BROAD RESTRUCTURED NAVIGATION
+# BROAD APPROACHABLE NAVIGATION STREAMS
 [[menu.main]]
 name = "Cloud Computing"
 url = "/categories/cloud-computing/"
@@ -52,3 +41,11 @@ weight = 20
 name = "All Posts"
 url = "/posts/"
 weight = 30
+
+# CLEAN FOOTER LAYOUT WITH GITHUB
+[params.footer]
+showPoweredBy = false
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/lamjan-t"
