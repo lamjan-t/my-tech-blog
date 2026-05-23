@@ -3,6 +3,7 @@ title: 'How to Flash Samsung Firmware Using Odin: The Complete No-Brick Guide'
 date: 2026-05-22
 draft: false
 tags: ['Android Engineering', 'Samsung', 'Odin', 'Tutorial']
+categories: ["Mobile"]
 ---
 
 Look, flashing a Samsung phone is not hard, but if you carry hand and do mistake, you will end up with a very expensive paperweight. Whether your phone is stuck on a boot loop logo, you want to downgrade your security patch, or you are trying to upgrade a device that refuses to pull over-the-air updates, Odin is the official engineering tool for the job.

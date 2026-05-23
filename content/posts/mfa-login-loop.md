@@ -3,6 +3,7 @@ title: 'How I Fixed the Azure MFA Login Loop'
 date: 2026-05-22
 draft: false
 tags: ['Azure', 'EntraID', 'Troubleshooting']
+categories: ["Cloud Computing"]
 ---
 
 ### The Issue

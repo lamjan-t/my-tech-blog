@@ -3,6 +3,7 @@ title: 'The Ultimate Guide to M365 Custom Domains: Automatic, Manual, and NS Pat
 date: 2026-05-22
 draft: false
 tags: ['Microsoft 365', 'DNS', 'Cloud-Administration', 'SysAdmin']
+categories: ["Cloud Computing"]
 ---
 
 Nobody wants to use that long company.onmicrosoft.com address for official business emails. It looks temporary and unprofessional. Mapping your actual custom domain to Microsoft 365 is the very first thing you should do, but if your DNS is not correct, your emails will just be bouncing.

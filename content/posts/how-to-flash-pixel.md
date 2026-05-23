@@ -3,6 +3,7 @@ title: 'How to Flash Pixel Factory Image: A Step by Step Fix for Bootloops'
 date: 2026-05-22
 draft: false
 tags: ['Android Engineering', 'Google Pixel', 'Flashing Guide']
+categories: ["Mobile"]
 ---
 
 If your phone is stuck on the Google logo or you want to return to pure stock software, learning how to flash pixel factory image files is the ultimate solution. This straight to the point guide provides a complete step by step fix to manually restore your device, clear out deep software bugs, or completely unbrick a soft brick condition. We will skip the automated web tools and use raw platform tools so you can see exactly what is happening under the hood.

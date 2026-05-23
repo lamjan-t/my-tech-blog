@@ -3,6 +3,7 @@ title: 'How to Fix Audio Issue on Windows 11/10: The Step by Step Fix'
 date: 2026-05-22
 draft: false
 tags: ['Windows', 'Troubleshooting', 'SysAdmin']
+categories: ["Cloud Computing"]
 ---
 
 Nothing breaks your flow faster than launching a meeting or opening a video only to realize your sound is completely dead. If you are dealing with a situation where no audio output device is installed or your sound suddenly stopped working after a recent update, you do not need to panic. This step by step fix will walk you through the exact troubleshooting path that enterprise support engineers use to handle corrupt sound stacks, broken drivers, and misconfigured background endpoints on Windows 11 and Windows 10 systems. Let us get your sound working again without unnecessary OS reinstalls.

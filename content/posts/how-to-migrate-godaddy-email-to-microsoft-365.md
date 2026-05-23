@@ -3,6 +3,7 @@ title: 'How to Migrate GoDaddy Email to Microsoft 365: The Complete Step by Step
 date: 2026-05-23
 draft: false
 tags: ['Microsoft 365', 'Cloud Migration', 'GoDaddy', 'Tutorial']
+categories: ["Cloud Computing"]
 ---
 
 It is incredibly common to get these terms mixed up, but confusing a basic domain pointer with an actual mailbox migration will cause a massive data loss. If you only move the email address by flipping your DNS settings, you are essentially just forwarding your mail to a brand new empty building. Your old folders, calendar invites, and historical contacts will be left behind in the old GoDaddy servers.

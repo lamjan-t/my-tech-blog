@@ -8,7 +8,7 @@ home = ["HTML", "RSS", "JSON"]
 
 [params]
 env = "production"
-description = "Deep-dive tutorials on Microsoft 365 administration, systems infrastructure, and Android OS engineering."
+description = "Deep-dive tutorials on cloud computing infrastructure, enterprise systems administration, and mobile OS engineering."
 author = "lamjan"
 defaultTheme = "auto"
 ShowCodeCopyButtons = true
@@ -27,7 +27,7 @@ apple_touch_icon = "/apple-touch-icon.png"
 
 [params.homeInfoParams]
 Title = "Hey, I'm lamjan 👋"
-Content = "Welcome to my digital lab. I write straight-to-the-point technical guides covering enterprise Microsoft 365 tenants, custom Android operating system configurations, and low-level system recovery paths."
+Content = "Welcome to my digital lab. I write straight-to-the-point technical guides covering general cloud computing infrastructure, enterprise information systems, and low-level mobile software modifications."
 
 [[params.socialIcons]]
 name = "github"
@@ -37,15 +37,15 @@ url = "https://github.com/lamjan-t"
 name = "linkedin"
 url = "https://www.linkedin.com/in/abdulhakeem-tijani/"
 
-# SPLIT NAVIGATION LAYOUT
+# BROAD RESTRUCTURED NAVIGATION
 [[menu.main]]
-name = "Microsoft 365"
-url = "/categories/m365/"
+name = "Cloud Computing"
+url = "/categories/cloud-computing/"
 weight = 10
 
 [[menu.main]]
-name = "Android OS"
-url = "/categories/android/"
+name = "Mobile"
+url = "/categories/mobile/"
 weight = 20
 
 [[menu.main]]

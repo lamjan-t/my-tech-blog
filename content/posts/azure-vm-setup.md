@@ -3,6 +3,7 @@ title: 'How to Spin Up an Azure VM Clean and Fast'
 date: 2026-05-22
 draft: false
 tags: ['Azure', 'Cloud', 'Infrastructure', 'Compute']
+categories: ["Cloud Computing"]
 ---
 
 If you are working in cloud engineering, spinning up a Virtual Machine in Azure is basic infrastructure work. You do not need any over-complicated setup or long stories to get one live. 
