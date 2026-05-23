@@ -10,54 +10,60 @@ If your phone is stuck on the Google logo or you want to return to pure stock so
 
 ### Prerequisites Before You Begin
 
-Do not rush this process. If you skip any of these requirements, you risk bricking your device completely.
+Do not rush this process. If yous kip any of these requirements, you risk bricking your device completely.
 
-* A genuine Google Pixel phone with at least 50% battery charge.
-* A high quality USB-C to USB-C or USB-A to USB-C data sync cable.
-* A computer running Windows, macOS, or Linux.
-* Full backup of your data because unlocking the bootloader wipes everything clean.
+* **Unlockable Bootloader (Absolute Requirement):** Your Pixel must be a variant that allows bootloader unlocking (such as a direct Google Store model). If you are using a carrier-locked model (like network-branded Verizon devices) where the "OEM unlocking" toggle inside Developer Options is permanently greyed out, your bootloader cannot be unlocked and this manual flashing methodology will not work.
+* **Unlocked Bootloader Status:** Manually writing raw factory partition binaries directly via fastboot requires an unlocked bootloader to accept partition modifications.
+* **Full Data Backup:** Unlocking the bootloader forces a mandatory hardware-level factory reset. Back up all critical accounts, local files, and two-factor tokens before running any fastboot routines.
+* **Battery Charge:** Ensure the smartphone has at least a 50% battery threshold to prevent a mid-execution power cut.
+* **Hardware Interconnect:** A reliable, high-quality data sync cable (USB-C to USB-C or a direct motherboard-connected USB-A to USB-C cable).
+* **Host Operating System:** A computer running Windows, macOS, or Linux with administrative shell rights.
 
 ### Essential Software Downloads
 
-You need to grab the official binaries directly from the source before running any commands.
+You must harvest your operational tools and official binaries straight from the authorized upstream endpoints before running terminal commands.
 
-1. Download the official Android SDK Platform-Tools package for your operating system.
-2. Download the exact factory image zip file tailored specifically for your Pixel model number. Double check your model matching to prevent a complete hardware mismatch error.
+1. Download the official [Android SDK Platform-Tools Package](https://developer.android.com/tools/releases/platform-tools) matching your host operating system to acquire the latest stable `adb` and `fastboot` core binaries.
+2. Download the precise firmware bundle matching your smartphone configuration from the official [Google Factory Images for Nexus and Pixel Devices Repository](https://developers.google.com/android/images). Double-check your device's exact model identifier and carrier sub-variant to avoid code-mismatch validation failures during installation.
 
-Extract the Platform-Tools zip package to an easily accessible folder on your computer, such as C:\platform-tools. Next, extract the contents of the pixel factory image zip directly into that exact same platform-tools folder so all execution files sit together.
+Extract the Platform-Tools zip package to a clean directory on your local disk, such as `C:\platform-tools`. Next, extract the contents of the compiled Pixel factory image zip file directly into that exact same `C:\platform-tools` folder so all executable automation scripts, bootloaders, and image binaries sit in the same execution context.
 
 ### Prepare the Smartphone Environment
 
-Your phone needs to be configured to accept low level system commands from your computer interface.
+Your phone needs to be configured to accept low-level system commands from your computer interface.
 
-Open your phone settings, navigate to About Phone, and tap the Build Number seven times until developer mode activates. Go back to System, open Developer Options, and toggle on USB Debugging along with OEM Unlocking.
-
-![Enabling USB Debugging and OEM Unlocking inside Android settings](/images/pixel-developer-options-setup.png)
+Open your phone settings, navigate to About Phone, and tap the Build Number seven times until developer mode activates. Go back to System, open Developer Options, and toggle on USB Debugging along with OEM Unlocking:
 
 ### Booting into Fastboot Mode
 
 Connect your device to the computer using your USB cable. Open your terminal or command prompt, navigate to your platform tools directory, and verify the connection.
 
+```powershell
 cd C:\platform-tools
 .\adb devices
+```
 
 If your device is authorized, you will see your serial number. Now, boot into the bootloader interface:
 
+```powershell
 .\adb reboot bootloader
+```
 
 ### Unlocking the Bootloader
 
 Once the phone screen changes to the Fastboot layout, verify that the computer can still communicate with the hardware:
 
+```powershell
 .\fastboot devices
+```
 
 Before flashing, the security gates must be opened. Run this command to unlock the bootloader interface:
 
+```powershell
 .\fastboot flashing unlock
+```
 
 Look at your phone screen, use the volume keys to select Unlock the bootloader, and press the power button to execute. This step clears all user data completely.
-
-![Pixel fastboot unlock confirmation screen layout](/images/pixel-fastboot-unlock-screen.png)
 
 ### Executing the Flash All Script
 
@@ -65,7 +71,9 @@ Navigate to the folder where you extracted the factory image. Since you placed e
 
 On a Windows machine, execute the script straight from your PowerShell window:
 
+```powershell
 .\flash-all.bat
+```
 
 The script will automatically execute, unpacking the bootloader, radio, baseband partitions, and the main system images. This process takes roughly 5 to 7 minutes. The device will reboot into fastboot mode multiple times during the execution. Do not touch the connection cable under any circumstances.
 
@@ -77,7 +85,9 @@ To maintain data integrity and device security, you should close the bootloader 
 
 Boot back into fastboot mode and execute the lockdown command:
 
+```powershell
 .\fastboot flashing lock
+```
 
 Confirm the selection on your device screen using the hardware buttons. Your phone is completely unbricked and restored to pristine factory configuration.
 ---
