@@ -25,8 +25,8 @@ Before you even think of connecting your phone to your PC, you must cross check 
 Download these files onto your PC before you begin. Keep them organized in a single folder on your desktop.
 
 1. Samsung USB Drivers: Download and install the official <a href="https://developer.samsung.com/android-usb-driver" target="_blank" rel="noopener noreferrer">Samsung Mobile USB Driver package</a> so your computer can talk to your phone in download mode.
-2. Odin Tool: Download the latest stable version of Odin (v3.14.4 is ideal for modern Android versions) from trusted hubs like <a href="https://samfw.com/blog/download-odin-all-version" target="_blank" rel="noopener noreferrer">SamFw Odin Download</a>. Extract the zip folder.
-3. Official Firmware: Use websites like <a href="https://samfw.com/" target="_blank" rel="noopener noreferrer">SamFw</a> to download the exact firmware matching your phone model number and region code (CSC).
+2. Odin Tool: Download the latest stable version of Odin (v3.14.4 is ideal for modern Android versions) directly from <a href="https://samfw.com/blog/download-odin-all-version" target="_blank" rel="noopener noreferrer">SamFw Odin Download</a>. Extract the zip folder.
+3. Official Firmware: Use the archive at <a href="https://samfw.com/" target="_blank" rel="noopener noreferrer">SamFw</a> to download the exact firmware matching your phone model number and region code (CSC).
 
 Critical Danger Alert: Never flash firmware meant for another model number. If your phone is an SM-G998B, do not attempt to flash SM-G998U firmware. Check your model number under Settings > About Phone. Also check your binary block number (SW REV) under download mode; Samsung will not allow you to downgrade to a firmware with a lower binary number than what is currently on your phone.
 
