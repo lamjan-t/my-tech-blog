@@ -1,7 +1,7 @@
 ---
 title: 'How to Spin Up an Azure VM Clean and Fast'
 date: 2026-05-22
-draft: false
+draft: true
 tags: ['Azure', 'Cloud', 'Infrastructure', 'Compute']
 categories: ["Cloud Computing"]
 ---
