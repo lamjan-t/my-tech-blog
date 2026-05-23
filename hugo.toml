@@ -1,4 +1,4 @@
-baseURL = 'https://lamjan.com/'
+﻿baseURL = 'https://lamjan.com/'
 languageCode = 'en-us'
 title = 'lamjan'
 theme = 'PaperMod'
@@ -26,7 +26,7 @@ favicon32x32 = "/favicon-32x32.png"
 apple_touch_icon = "/apple-touch-icon.png"
 
 [params.homeInfoParams]
-Title = "Hey, I'm lamjan ??"
+Title = "Hey, I'm lamjan 👋"
 Content = "Welcome to my digital lab. I write straight-to-the-point technical guides covering enterprise Microsoft 365 tenants, custom Android operating system configurations, and low-level system recovery paths."
 
 [[params.socialIcons]]
