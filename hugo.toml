@@ -8,13 +8,14 @@ home = ["HTML", "RSS", "JSON"]
 
 [params]
 env = "production"
-description = "Clear, simple, and step-by-step guides for general cloud setups and phone software diagnostics."
+description = "Clear, actionable technical solutions for Cloud Operations, Android Rescue, and Windows IT Support."
 author = "lamjan"
 defaultTheme = "auto"
 ShowCodeCopyButtons = true
 comments = true
+unsafe = true
+ShowSearchButton = true
 
-# CLEAN TOP LABEL BRANDING
 [params.label]
 text = "lamjan"
 icon = "/images/logo.svg"
@@ -26,28 +27,28 @@ favicon16x16 = "/favicon-16x16.png"
 favicon32x32 = "/favicon-32x32.png"
 apple_touch_icon = "/apple-touch-icon.png"
 
-# BROAD APPROACHABLE NAVIGATION STREAMS
+# SEARCH-OPTIMIZED NAVIGATION
 [[menu.main]]
-name = "Cloud Computing"
-url = "/categories/cloud-computing/"
+name = "Cloud Operations"
+url = "/categories/cloud-operations/"
 weight = 10
 
 [[menu.main]]
-name = "Mobile"
-url = "/categories/mobile/"
+name = "Android Rescue"
+url = "/categories/android-rescue/"
 weight = 20
 
 [[menu.main]]
-name = "All Posts"
-url = "/posts/"
+name = "Windows & IT Support"
+url = "/categories/windows-it/"
 weight = 30
 
-# CLEAN FOOTER LAYOUT WITH GITHUB
 [params.footer]
 showPoweredBy = false
 
 [[params.socialIcons]]
 name = "github"
 url = "https://github.com/lamjan-t"
+
 [markup.goldmark.renderer]
 unsafe = true
