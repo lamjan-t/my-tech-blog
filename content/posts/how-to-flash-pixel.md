@@ -1,33 +1,39 @@
 ---
-title: 'How to Flash Official Stock Firmware on Google Pixel'
+title: 'How to Unlock Bootloader and Flash Pixel Firmware'
 date: 2026-05-24
 draft: false
 categories: ["Android Rescue"]
 ---
 
-If your Pixel is stuck in a bootloop, or you need to revert to stock after experimenting with custom ROMs, flashing the factory image is the only way to get a clean, official start.
+Flashing a Pixel is a two-part process. You must unlock the bootloader before you can overwrite the system firmware.
 
 ### Checklist
-* **USB-C Cable:** Use a high-quality data cable (avoid the cheap ones that only charge).
-* **Platform-Tools:** You need the latest [Android SDK Platform-Tools](https://developer.android.com/tools/releases/platform-tools) downloaded and extracted on your PC.
-* **Battery:** Your phone must have at least 60% charge. If it dies mid-flash, you are looking at a hard-brick.
-* **Backup:** This process wipes everything. If your data is still accessible, back it up now.
+* **USB-C Cable:** Use a high-quality data cable (avoid charge-only cables).
+* **Platform-Tools:** Download [Android SDK Platform-Tools](https://developer.android.com/tools/releases/platform-tools){:target="_blank" rel="noopener noreferrer"} and extract it.
+* **Google USB Drivers:** Install the [Google USB Driver](https://developer.android.com/studio/run/win-usb){:target="_blank" rel="noopener noreferrer"} if you are on Windows.
+* **Factory Image:** Download the correct firmware for your specific model from [Google’s Pixel Factory Images](https://developers.google.com/android/images){:target="_blank" rel="noopener noreferrer"}. Extract the zip file and move all contents into your `platform-tools` folder.
 
-### The Fix
+### Part 1: Unlocking the Bootloader
+*Note: This will wipe your phone entirely. Back up your data first.*
 
-1. **Get the Image:** Go to the [official Google Pixel Factory Image site](https://developers.google.com/android/images), find your specific model, and download the latest version.
-2. **Prepare the Files:** Extract the zip file you just downloaded. You will see a folder containing a series of `flash-all.bat` (Windows) or `flash-all.sh` (Linux/Mac) files, plus a large `image-modelname-version.zip` file.
-3. **Connect to PC:** Move all those extracted files into your `platform-tools` folder.
-4. **Bootloader Mode:** Turn your phone off. Hold **Volume Down + Power** until you see the Fastboot menu (the one with the Android lying on its back). Connect it to your PC.
-5. **Unlock Bootloader (If needed):** If you are flashing from a different firmware or the device is locked, ensure `fastboot flashing unlock` has been run. 
-6. **Execute:** * On Windows: Double-click `flash-all.bat`.
-    * On Linux/Mac: Run `./flash-all.sh` in your terminal.
+1. **Enable Developer Options:** Go to **Settings > About Phone** and tap **Build Number** 7 times.
+2. **Enable OEM Unlocking:** Go to **Settings > System > Developer Options** and toggle on **OEM Unlocking**.
+3. **Boot to Fastboot:** Turn the phone off. Hold **Volume Down + Power** until the Fastboot menu appears.
+4. **Connect:** Plug the phone into your PC.
+5. **Unlock:** Open a terminal in your `platform-tools` folder and run:
+   `fastboot flashing unlock`
+6. **Confirm:** Use the volume buttons on the phone to select "Unlock the bootloader" and press Power to confirm. The phone will reset.
+
+### Part 2: Flashing the Firmware
+
+1. **Boot to Fastboot:** Turn off the phone and hold **Volume Down + Power** again to reach the bootloader menu.
+2. **Connect:** Ensure the phone is connected to your PC.
+3. **Flash:** Run the script from the files you moved into the `platform-tools` folder:
+   * **Windows:** Double-click `flash-all.bat`.
+   * **Linux/Mac:** Run `./flash-all.sh`.
+4. **Wait:** The phone will reboot multiple times. Do not touch the cable until the phone boots into the initial welcome/setup screen.
 
 ### Troubleshooting
-* **"Command not found" or "Device not found":** Your PC is not talking to the phone. Reinstall your Google USB drivers or try a different USB port. 
-* **The terminal window closes immediately:** Open a command prompt/terminal inside the `platform-tools` folder and run `flash-all.bat` manually. This lets you see the error message if the script crashes.
-* **Stuck on the Google Logo:** This is normal after a flash. Give it at least 10 minutes. If it doesn't move, you may need to factory reset from the recovery menu.
-
----
-### Cleanup
-Once the phone reboots, it will be factory fresh. Go to **Settings > About Phone** and verify the build number matches what you flashed. If you want to keep the device secure, run `fastboot flashing lock` to re-lock the bootloader.
+* **"Command not found":** You are not running the command inside the `platform-tools` folder.
+* **"Device not found":** Drivers are missing or the cable is faulty. Try a different USB port.
+* **"Flash-all script fails":** If the script fails, try flashing the `bootloader`, `radio`, and `image` files manually using `fastboot flash` commands rather than the batch file.
